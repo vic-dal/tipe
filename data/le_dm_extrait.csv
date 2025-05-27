@@ -1,0 +1,208 @@
+Forme,Lemme,Cat,Genre,Nb,Pers,Temps,Spec,Fonc,Gvn/Dist/Aux,Graph,Lang,Cmp,FLX,DRV,UNAMB,Ref,Sem,Info/Accent
+quel,quel,A,m,s,,,int,,,,,,S_DE
+quels,quel,A,m,p,,,int,,,,,,S_DE
+quelle,quel,A,f,s,,,int,,,,,,S_DE
+quelles,quel,A,f,p,,,int,,,,,,S_DE
+leur,leur,A,m,s,,,pos,,,,,,S_0
+leur,leur,A,f,s,,,pos,,,,,,S_0
+leurs,leur,A,m,p,,,pos,,,,,,S_0
+leurs,leur,A,f,p,,,pos,,,,,,S_0
+mien,mien,A,m,s,,,pos,,,,,,S_DE
+miens,mien,A,m,p,,,pos,,,,,,S_DE
+mienne,mien,A,f,s,,,pos,,,,,,S_DE
+miennes,mien,A,f,p,,,pos,,,,,,S_DE
+nôtre,nôtre,A,m,s,,,pos,,,,,,S_0
+nôtre,nôtre,A,f,s,,,pos,,,,,,S_0
+nôtres,nôtre,A,m,p,,,pos,,,,,,S_0
+nôtres,nôtre,A,f,p,,,pos,,,,,,S_0
+sien,sien,A,m,s,,,pos,,,,,,S_DE
+siens,sien,A,m,p,,,pos,,,,,,S_DE
+sienne,sien,A,f,s,,,pos,,,,,,S_DE
+siennes,sien,A,f,p,,,pos,,,,,,S_DE
+tien,tien,A,m,s,,,pos,,,,,,S_DE
+tiens,tien,A,m,p,,,pos,,,,,,S_DE
+tienne,tien,A,f,s,,,pos,,,,,,S_DE
+tiennes,tien,A,f,p,,,pos,,,,,,S_DE
+pluvial,pluvial,A,m,s,,,,,,,,,AUX_ALE
+pluviale,pluvial,A,f,s,,,,,,,,,AUX_ALE
+pluviales,pluvial,A,f,p,,,,,,,,,AUX_ALE
+pluviaux,pluvial,A,m,p,,,,,,,,,AUX_ALE
+pluvieux,pluvieux,A,m,s,,,,,,,,,EUX_EUSE
+pluvieux,pluvieux,A,m,p,,,,,,,,,EUX_EUSE
+pluvieuse,pluvieux,A,f,s,,,,,,,,,EUX_EUSE
+pluvieuses,pluvieux,A,f,p,,,,,,,,,EUX_EUSE
+guère,guère,ADV,,,,,neg
+jamais,jamais,ADV,,,,,neg
+pas encore,pas encore,ADV,,,,,neg,,,,,,,,UNAMB
+pas seulement,pas seulement,ADV,,,,,neg,,,,,,,,UNAMB
+pas,pas,ADV,,,,,neg
+plus,plus,ADV,,,,,neg
+point,point,ADV,,,,,neg
+combien,combien,ADV,,,,,int
+comment,comment,ADV,,,,,int
+où,où,ADV,,,,,int
+pourquoi,pourquoi,ADV,,,,,int
+quand,quand,ADV,,,,,int
+près de,près de,ADV,,,,,pnum
+autour de,autour de,ADV,,,,,pnum
+plus de,plus de,ADV,,,,,pnum
+moins de,moins de,ADV,,,,,pnum
+de l'ordre de,de l'ordre de,ADV,,,,,pnum
+de l’ordre de,de l'ordre de,ADV,,,,,pnum
+environ,environ,ADV,,,,,pnum
+quelque,quelque,ADV,,,,,pnum
+a=capella,à capella,ADV,,,,,,,,Opt,la,,,,UNAMB
+à=capella,à capella,ADV,,,,,,,,Rec,la,,,,UNAMB
+a=contrario,à contrario,ADV,,,,,,,,Opt,la,,,,UNAMB
+à=contrario,à contrario,ADV,,,,,,,,Rec,la,,,,UNAMB
+a=divinis,a divinis,ADV,,,,,,,,,la,,,,UNAMB
+a=fortiori,à fortiori,ADV,,,,,,,,Opt,la,,,,UNAMB
+à=fortiori,à fortiori,ADV,,,,,,,,Rec,la,,,,UNAMB
+a=giorno,à giorno,ADV,,,,,,,,,it,,,,UNAMB
+à=giorno,à giorno,ADV,,,,,,,,,it,,,,UNAMB
+a=maxima,a maxima,ADV,,,,,,,,,la,,,,UNAMB
+a=minima,à minima,ADV,,,,,,,,Opt,la,,,,UNAMB
+à=minima,à minima,ADV,,,,,,,,Rec,la,,,,UNAMB
+a=posteriori,à postériori,ADV,,,,,,,,Opt,la,,,,UNAMB
+à=posteriori,à postériori,ADV,,,,,,,,Opt,la,,,,UNAMB
+à=postériori,à postériori,ADV,,,,,,,,Rec,la,,,,UNAMB
+d',de,DET,m,p,,,,,,,,,PL,,UNAMB
+d',de,DET,f,p,,,,,,,,,PL,,UNAMB
+d’,de,DET,m,p,,,,,,,,,PL,,UNAMB
+d’,de,DET,f,p,,,,,,,,,PL,,UNAMB
+de,de,DET,m,p,,,,,,,,,PL
+de,de,DET,f,p,,,,,,,,,PL
+un,un,DET,m,s,,,ind
+une,un,DET,f,s,,,ind
+des,des,DET,f,p,,,ind
+des,des,DET,m,p,,,ind
+l',l',DET,m,s,,,def,,,,,,SG,,UNAMB
+l',l',DET,f,s,,,def,,,,,,SG,,UNAMB
+l’,l’,DET,m,s,,,def,,,,,,SG,,UNAMB
+l’,l’,DET,f,s,,,def,,,,,,SG,,UNAMB
+la,la,DET,f,s,,,def
+le,le,DET,m,s,,,def
+les,les,DET,,p,,,def
+ledit,ledit,DET,m,s,,,def
+ladite,ledit,DET,f,s,,,def
+lesdits,ledit,DET,m,p,,,def
+lesdites,ledit,DET,f,p,,,def
+clan,clan,N,m,s,,,,,,,,,M_S
+clans,clan,N,m,p,,,,,,,,,M_S
+clandestinité,clandestinité,N,f,s,,,,,,,,,F_S
+clandestinités,clandestinité,N,f,p,,,,,,,,,F_S
+clapet,clapet,N,m,s,,,,,,,,,M_S
+clapets,clapet,N,m,p,,,,,,,,,M_S
+clapier,clapier,N,m,s,,,,,,,,,M_S
+clapiers,clapier,N,m,p,,,,,,,,,M_S
+clapot,clapot,N,m,s,,,,,,,,,M_S
+clapots,clapot,N,m,p,,,,,,,,,M_S
+clapotage,clapotage,N,m,s,,,,,,,,,M_S
+clapotages,clapotage,N,m,p,,,,,,,,,M_S
+clapotement,clapotement,N,m,s,,,,,,,,,M_S
+clapotements,clapotement,N,m,p,,,,,,,,,M_S
+clapotis,clapotis,N,m,s,,,,,,,,,M_0
+clapotis,clapotis,N,m,p,,,,,,,,,M_0
+clappement,clappement,N,m,s,,,,,,,,,M_S
+clappements,clappement,N,m,p,,,,,,,,,M_S
+claquage,claquage,N,m,s,,,,,,,,,M_S
+claquages,claquage,N,m,p,,,,,,,,,M_S
+claque,claque,N,m,s,,,,,,,,,S_0
+claque,claque,N,f,s,,,,,,,,,S_0
+claques,claque,N,m,p,,,,,,,,,S_0
+claques,claque,N,f,p,,,,,,,,,S_0
+modernisation,modernisation,N,f,s,,,,,,,,,F_S
+modernisations,modernisation,N,f,p,,,,,,,,,F_S
+modernisme,modernisme,N,m,s,,,,,,,,,M_S
+modernismes,modernisme,N,m,p,,,,,,,,,M_S
+moderniste,moderniste,N,m,s,,,,,,,,,S_0
+moderniste,moderniste,N,f,s,,,,,,,,,S_0
+modernistes,moderniste,N,m,p,,,,,,,,,S_0
+modernistes,moderniste,N,f,p,,,,,,,,,S_0
+modernité,modernité,N,f,s,,,,,,,,,F_S
+modernités,modernité,N,f,p,,,,,,,,,F_S
+modestie,modestie,N,f,s,,,,,,,,,F_S
+modesties,modestie,N,f,p,,,,,,,,,F_S
+aimerai,aimer,V,,s,1,F,,,a,,,,AIMER
+aimeras,aimer,V,,s,2,F,,,a,,,,AIMER
+aimera,aimer,V,,s,3,F,,,a,,,,AIMER
+aimerons,aimer,V,,p,1,F,,,a,,,,AIMER
+aimerez,aimer,V,,p,2,F,,,a,,,,AIMER
+aimeront,aimer,V,,p,3,F,,,a,,,,AIMER
+aimerais,aimer,V,,s,1,C,,,a,,,,AIMER
+aimerais,aimer,V,,s,2,C,,,a,,,,AIMER
+aimerait,aimer,V,,s,3,C,,,a,,,,AIMER
+aimerions,aimer,V,,p,1,C,,,a,,,,AIMER
+aimeriez,aimer,V,,p,2,C,,,a,,,,AIMER
+aimeraient,aimer,V,,p,3,C,,,a,,,,AIMER
+aimer,aimer,V,,,,INF,,,a,,,,AIMER
+aime,aimer,V,,s,1,PR,,,a,,,,AIMER
+aimes,aimer,V,,s,2,PR,,,a,,,,AIMER
+aime,aimer,V,,s,3,PR,,,a,,,,AIMER
+aiment,aimer,V,,p,3,PR,,,a,,,,AIMER
+aime,aimer,V,,s,1,S,,,a,,,,AIMER
+aimes,aimer,V,,s,2,S,,,a,,,,AIMER
+aime,aimer,V,,s,3,S,,,a,,,,AIMER
+aiment,aimer,V,,p,3,S,,,a,,,,AIMER
+aime,aimer,V,,s,2,IP,,,a,,,,AIMER
+aimes,aimer,V,,s,2,IP,,,a,,,,AIMER
+aimez,aimer,V,,p,2,IP,,,a,,,,AIMER
+aimez,aimer,V,,p,2,PR,,,a,,,,AIMER
+aimions,aimer,V,,p,1,I,,,a,,,,AIMER
+aimiez,aimer,V,,p,2,I,,,a,,,,AIMER
+aimèrent,aimer,V,,p,3,PS,,,a,,,,AIMER
+aimions,aimer,V,,p,1,S,,,a,,,,AIMER
+aimiez,aimer,V,,p,2,S,,,a,,,,AIMER
+aimé,aimer,V,m,s,,PP,,,a,,,,AIMER
+aimée,aimer,V,f,s,,PP,,,a,,,,AIMER
+aimés,aimer,V,m,p,,PP,,,a,,,,AIMER
+aimées,aimer,V,f,p,,PP,,,a,,,,AIMER
+aimè-je,aimer,V,,s,1,PR,,,a,Rec,,,AIMER,,UNAMB
+aimè-je,aimer,V,,s,1,S,,,a,Rec,,,AIMER,,UNAMB
+aimé-je,aimer,V,,s,1,PR,,,a,Opt,,,AIMER,,UNAMB
+aimé-je,aimer,V,,s,1,S,,,a,Opt,,,AIMER,,UNAMB
+aimons,aimer,V,,p,1,IP,,,a,,,,AIMER
+aimons,aimer,V,,p,1,PR,,,a,,,,AIMER
+aimais,aimer,V,,s,1,I,,,a,,,,AIMER
+aimais,aimer,V,,s,2,I,,,a,,,,AIMER
+aimait,aimer,V,,s,3,I,,,a,,,,AIMER
+aimaient,aimer,V,,p,3,I,,,a,,,,AIMER
+aimai,aimer,V,,s,1,PS,,,a,,,,AIMER
+aimas,aimer,V,,s,2,PS,,,a,,,,AIMER
+aima,aimer,V,,s,3,PS,,,a,,,,AIMER
+aimâmes,aimer,V,,p,1,PS,,,a,,,,AIMER
+aimâtes,aimer,V,,p,2,PS,,,a,,,,AIMER
+aimasse,aimer,V,,s,1,IS,,,a,,,,AIMER
+aimasses,aimer,V,,s,2,IS,,,a,,,,AIMER
+aimât,aimer,V,,s,3,IS,,,a,,,,AIMER
+aimassions,aimer,V,,p,1,IS,,,a,,,,AIMER
+aimassiez,aimer,V,,p,2,IS,,,a,,,,AIMER
+aimassent,aimer,V,,p,3,IS,,,a,,,,AIMER
+aimant,aimer,V,,,,G,,,a,,,,AIMER
+fleurîmes,fleurir,V,,p,1,PS,,,a,,,,FLEURIR
+fleurîtes,fleurir,V,,p,2,PS,,,a,,,,FLEURIR
+fleurirent,fleurir,V,,p,3,PS,,,a,,,,FLEURIR
+fleurisse,fleurir,V,,s,1,IS,,,a,,,,FLEURIR
+fleurisses,fleurir,V,,s,2,IS,,,a,,,,FLEURIR
+fleurît,fleurir,V,,s,3,IS,,,a,,,,FLEURIR
+fleurissions,fleurir,V,,p,1,IS,,,a,,,,FLEURIR
+fleurissiez,fleurir,V,,p,2,IS,,,a,,,,FLEURIR
+fleurissent,fleurir,V,,p,3,IS,,,a,,,,FLEURIR
+fleuris,fleurir,V,,s,1,PR,,,a,,,,FLEURIR
+fleuris,fleurir,V,,s,2,PR,,,a,,,,FLEURIR
+fleurit,fleurir,V,,s,3,PR,,,a,,,,FLEURIR
+fleuris,fleurir,V,,s,2,IP,,,a,,,,FLEURIR
+fleuri,fleurir,V,m,s,,PP,,,a,,,,FLEURIR
+fleurie,fleurir,V,f,s,,PP,,,a,,,,FLEURIR
+fleuris,fleurir,V,m,p,,PP,,,a,,,,FLEURIR
+fleuries,fleurir,V,f,p,,PP,,,a,,,,FLEURIR
+fleurissons,fleurir,V,,p,1,PR,,,a,,,,FLEURIR
+fût,être,V,,s,3,IS,x,,a,,,,ETRE
+fussions,être,V,,p,1,IS,x,,a,,,,ETRE
+fussiez,être,V,,p,2,IS,x,,a,,,,ETRE
+fussent,être,V,,p,3,IS,x,,a,,,,ETRE
+étais,être,V,,s,1,I,x,,a,,,,ETRE
+étais,être,V,,s,2,I,x,,a,,,,ETRE
+était,être,V,,s,3,I,x,,a,,,,ETRE
+étions,être,V,,p,1,I,x,,a,,,,ETRE
+étiez,être,V,,p,2,I,x,,a,,,,ETRE

@@ -12,5 +12,11 @@ module Lexer = Correcteur_lib__Lexer
 (** @canonical Correcteur_lib.Parser *)
 module Parser = Correcteur_lib__Parser
 
+(** @canonical Correcteur_lib.Rules *)
+module Rules = Correcteur_lib__Rules
+
 (** @canonical Correcteur_lib.Types *)
 module Types = Correcteur_lib__Types
+
+(** @canonical Correcteur_lib.Util *)
+module Util = Correcteur_lib__Util

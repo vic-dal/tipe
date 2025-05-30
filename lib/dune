@@ -1,4 +1,4 @@
 (library
  (name correcteur_lib)
- (modules correcteur index_builder lexer parser types)
+ (modules correcteur index_builder lexer parser types rules util)
  (libraries csv))

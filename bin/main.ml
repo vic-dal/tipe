@@ -1,17 +1,56 @@
 open Correcteur_lib.Correcteur
 
-let rechercher_mots (index : (string, mot list) Hashtbl.t) (cle : string) : mot list =
-	Hashtbl.find_opt index cle |> Option.value ~default:[]
+let counter = ref 0 ;;
+let next () = counter := !counter + 1; !counter ;;
 
-let print_mot mot =
-	Printf.printf "\n forme\t\t %s \n lemme\t\t %s \n cat\t\t %s \n genre\t\t %s \n nb\t\t %s \n pers\t\t %s \n temps\t\t %s \n spec\t\t %s \n fonc\t\t %s \n gvn_dist_aux\t\t %s \n graph\t\t %s \n lang\t\t %s \n cmp\t\t %s \n flx\t\t %s \n drv\t\t %s \n unamb\t\t %s \n ref\t\t %s \n sem\t\t %s \n info_accent%s\n\n" mot.forme mot.lemme mot.cat mot.genre mot.nb mot.pers mot.temps mot.spec mot.fonc mot.gvn_dist_aux mot.graph mot.lang mot.cmp mot.flx mot.drv mot.unamb mot.ref mot.sem mot.info_accent ;;
+let index = charger_index "data/index.msh" ;;
 
-let rec print_phrase (phrase:mot list) = match phrase with
-	| m::q -> Printf.printf "%s (%s - %s %s %s %s)\n" m.forme m.cat m.genre m.nb m.pers m.temps; print_phrase q
-	| _ -> ();;
+let phrases_possibles orig =
+	(* Liste des phrases possibles (produit cartesien) *)
+	let choix_mots = List.map (trouver_mots index) orig in
+	cartesian choix_mots
+
+let arbre_to_graphviz ast =
+	let create_node label =
+		let i = next () in
+		let name = Printf.sprintf "node_%d" i in
+		Printf.printf "%s[label=\"%s\"]\n" name label;
+		name
+	in
+
+	let create_leaf label =
+		let i = next () in
+		let name = Printf.sprintf "leaf_%d" i in
+		Printf.printf "%s[label=\"%s\",shape=\"plaintext\"]\n" name label;
+		name
+	in
+
+	let wire_nodes node_from node_to =
+		Printf.printf "%s->%s\n" node_from node_to
+	in
+
+	let rec traverse = function
+	| Feuille (nat, m) ->
+		let node_nat = create_node (nat_to_cat nat) in
+		let leaf_m = create_leaf m.forme in
+		wire_nodes node_nat leaf_m;
+		node_nat
+	| Noeud (syn, children) ->
+		let node_syn = create_node (string_of_syntagme syn) in
+		List.iter (fun child ->
+			let node_child = traverse child in
+			wire_nodes node_syn node_child
+		) children;
+		node_syn
+
+	in
+	Printf.printf "subgraph {\n" ;
+	let _ = traverse ast in
+	Printf.printf "}\n" ;
+	()
 
 let () =
-	let fichier_index = "index.msh" in
+	(* let fichier_index = "data/index.msh" in
 	let index =
 		if Sys.file_exists fichier_index then
 			charger_index fichier_index
@@ -19,7 +58,29 @@ let () =
 			let idx = construire_index () in
 			sauvegarder_index idx fichier_index;
 			idx
-	in
+	in *)
+	
 
-	let mots = rechercher_mots index "souris" in
-	print_phrase mots ;
+	let phrase = "la bestiole mange une crêpe" in
+
+
+	let phrase_orig = String.split_on_char ' ' phrase in
+	let phrases = phrases_possibles phrase_orig in
+
+	let nombre_success = ref 0 in
+
+	Printf.printf "digraph {\n" ;
+	List.iter (fun ph ->
+		let arbres = phrase_to_arbres ph in
+		List.iter (fun ast ->
+			arbre_to_graphviz ast;
+			nombre_success := !nombre_success + 1;
+		) arbres;
+		print_newline();
+	) phrases ;
+	Printf.printf "}\n" ;
+
+	if !nombre_success = 1 then
+		Printf.eprintf "\nJ'ai reconnu un arbre syntaxique.\n"
+	else
+		Printf.eprintf "\nJ'ai reconnu %d arbres syntaxiques.\n" (!nombre_success)

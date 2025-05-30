@@ -4,8 +4,7 @@
    
 syntactic_analyzer/  
 ├── data/  
-│   ├── le_dm.csv                # Fichier de données : dictionnaire morphosyntaxique (Le DM de François Trouilleux)  
-│   ├── le_dm_extrait.csv        # Et version abrégée (pour les tests)  
+│   ├── le_dm_extrait.csv                # Extrait du fichier de données : dictionnaire morphosyntaxique (Le DM de François Trouilleux) 
 │   └── index.msh                # Fichier Marshal généré par index_builder.ml  
 ├── bin/  
 │   └── main.ml                  # Programme principal (exécution du projet)  

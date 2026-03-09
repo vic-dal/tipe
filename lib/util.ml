@@ -8,3 +8,4 @@ let rec cartesian ll = match ll with
         ) possibles
       ) m1 in
     List.concat llls
+;;

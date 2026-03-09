@@ -22,16 +22,23 @@ type mot = {
 
 type phrase = mot list
 
+type mot_flex = {
+	flexions : mot list;
+}
+
+type phrase_flex = mot_flex list
+
 type nature =
-	| Det | N | Adj | V | Adv | Pro | Intj
+	| Det | N | Adj | V | Adv | Pro | Intj | Aux
 	| Pfx | ConjC | ConjS | Prep | Num | PDet | Pres
 
 type syntagme =
-	| S | GN | GV | GAdj | GP
+	| S | PInd | PSub | GN | GV | GAdj | GP
 
 type symbole =
 	| Nature of nature
 	| Syntagme of syntagme
+	
 
 type ast =
 	| Noeud of syntagme * ast list
@@ -54,6 +61,7 @@ let cat_to_nat = function
 	| "NUM" -> Num
 	| "PDET" -> PDet
 	| "PRES" -> Pres
+	| "AUX" -> Aux
 	| s -> raise (Categorie_Inconnue s)
 
 let nat_to_cat = function
@@ -71,13 +79,17 @@ let nat_to_cat = function
 	| Num -> "NUM" 
 	| PDet -> "PDET" 
 	| Pres-> "PRES"
+	| Aux -> "AUX"
 
 let string_of_syntagme = function
 	| S -> "S"
+	| PInd -> "PI"
+	| PSub -> "PS"
 	| GN -> "GN"
 	| GV -> "GV"
 	| GAdj -> "GAdj"
 	| GP -> "GP"
+	
 
 let print_mot_detail mot =
 	Printf.printf

@@ -1,4 +1,5 @@
 (executable
  (name main)
+ (flags (:standard -w -a))
  (libraries correcteur_lib)
 )

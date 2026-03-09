@@ -6,9 +6,8 @@ let next () = counter := !counter + 1; !counter ;;
 let index = charger_index "data/index.msh" ;;
 
 let phrases_possibles orig =
-	(* Liste des phrases possibles (produit cartesien) *)
-	let choix_mots = List.map (trouver_mots index) orig in
-	cartesian choix_mots
+	List.map (fun w -> { flexions = trouver_mots index w }) orig
+	
 
 let arbre_to_graphviz ast =
 	let create_node label =
@@ -49,38 +48,24 @@ let arbre_to_graphviz ast =
 	Printf.printf "}\n" ;
 	()
 
+
+let nb_arbres_phrase_string phrase =
+	try 
+		let mots = String.split_on_char ' ' (String.trim (String.lowercase_ascii phrase)) in
+		let phrase_flex = phrases_possibles mots in
+		let arbres = phrase_to_arbres phrase_flex in
+		List.iter arbre_to_graphviz arbres;
+		List.length arbres
+	with Categorie_Inconnue _ -> 0
+;;
+
 let () =
-	(* let fichier_index = "data/index.msh" in
-	let index =
-		if Sys.file_exists fichier_index then
-			charger_index fichier_index
-		else
-			let idx = construire_index () in
-			sauvegarder_index idx fichier_index;
-			idx
-	in *)
-	
-
-	let phrase = "la bestiole mange une crêpe" in
-
-
-	let phrase_orig = String.split_on_char ' ' phrase in
-	let phrases = phrases_possibles phrase_orig in
-
-	let nombre_success = ref 0 in
-
 	Printf.printf "digraph {\n" ;
-	List.iter (fun ph ->
-		let arbres = phrase_to_arbres ph in
-		List.iter (fun ast ->
-			arbre_to_graphviz ast;
-			nombre_success := !nombre_success + 1;
-		) arbres;
-		print_newline();
-	) phrases ;
+	[
+		"le plancher est sorti de la presse";
+	]
+	|> List.filter_map (fun phrase -> 
+		Some (Printf.sprintf "(%d) %s" (nb_arbres_phrase_string phrase) phrase);
+	)
+	|> List.iter (fun s -> Printf.eprintf "%s\n" s); 
 	Printf.printf "}\n" ;
-
-	if !nombre_success = 1 then
-		Printf.eprintf "\nJ'ai reconnu un arbre syntaxique.\n"
-	else
-		Printf.eprintf "\nJ'ai reconnu %d arbres syntaxiques.\n" (!nombre_success)
